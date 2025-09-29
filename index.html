@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>訪問看護書類自動生成アプリ</title>
+  <link rel="stylesheet" href="/src/styles.css">
+</head>
+<body>
+  <header>
+    <h1>訪問看護書類自動生成アプリ</h1>
+  </header>
+  <main>
+    <section id="upload-section">
+      <h2>CSVファイルをアップロード</h2>
+      <div id="docTypeSelect">
+        <label><input type="radio" name="docType" value="plan" checked> 訪問看護計画書</label>
+        <label><input type="radio" name="docType" value="report"> 訪問看護報告書</label>
+        <label><input type="radio" name="docType" value="summary"> 看護サマリー</label>
+      </div>
+      <input type="file" id="csvInput" accept=".csv" />
+      <div id="csvPreview"></div>
+    </section>
+    <section id="output-section">
+      <h2>生成結果</h2>
+      <pre id="output"></pre>
+    </section>
+  </main>
+  <script src="/src/app.js"></script>
+</body>
+</html>
